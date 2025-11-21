@@ -35,6 +35,7 @@ credentials.json
 # ------------------------------
 # Data Files (local only)
 # ------------------------------
+data/
 data/**/*.csv
 data/**/*.xlsx
 data/**/*.parquet
@@ -102,3 +103,9 @@ result.txt
 *.txt
 churn_model/
 images/
+
+# ignore secrets
+*.env
+.env
+secrets.*
+keys.*
