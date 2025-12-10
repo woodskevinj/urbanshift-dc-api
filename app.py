@@ -1,8 +1,13 @@
+from dotenv import load_dotenv
+import os
+
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel, Field
 import numpy as np
 
 from src.predict import load_tf_model, predict_uplift
+
+load_dotenv()
 
 app = FastAPI(
     title="UrbanShift DC API",

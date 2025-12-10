@@ -21,8 +21,10 @@ pip-log.txt
 # ------------------------------
 # Environment variables
 # ------------------------------
+.env
 *.env
 .env.*
+secrets.*
 secrets.json
 credentials.json
 
