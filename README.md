@@ -17,6 +17,7 @@ Pandas, and FastAPI (coming soon).
 
 ## Project Structure
 
+```bash
 urbanshift-dc-api/
 │
 ├── data/
@@ -31,12 +32,13 @@ urbanshift-dc-api/
 │ ├── **init**.py
 │ ├── features.py
 │ ├── scoring.py
-│ ├── api.py  
+│ ├── api.py
 │ └── utils.py
 │
 ├── requirements.txt
 ├── README.md
 └── Dockerfile
+```
 
 ---
 
