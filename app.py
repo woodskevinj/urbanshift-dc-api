@@ -19,8 +19,16 @@ app = FastAPI(
 model = load_tf_model()
 
 class UpliftRequest(BaseModel):
-    crime_count: float = Field(..., ge=0, description="Total violent+drug crimes for the area.")
-    population: float = Field(..., gt=0, description="Population of the area")
+    crime_count: float = Field(
+        ..., 
+        ge=0, 
+        description="Total violent+drug crimes for the area."
+    )
+    population: float = Field(
+        ..., 
+        gt=0, 
+        description="Population of the area (must be > 0)"
+    )
     accessibility_score: float = Field(
         ...,
         ge=0,
@@ -33,6 +41,16 @@ class UpliftRequest(BaseModel):
         le=1,
         description="Relative home value score (0-1, where 1 is higher value).",
     )
+
+    class Config:
+        schema_extra = {
+            "example": {
+                "crime_count": 25,
+                "population": 4200,
+                "accessibility_score": 0.7,
+                "home_value_score": 0.4,
+            }
+        }
 
 class UpliftResponse(BaseModel):
     uplift_score: float
