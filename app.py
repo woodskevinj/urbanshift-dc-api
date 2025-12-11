@@ -2,7 +2,7 @@ from dotenv import load_dotenv
 import os
 
 from fastapi import FastAPI, HTTPException
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, ConfigDict
 import numpy as np
 
 from src.predict import load_tf_model, predict_uplift
@@ -42,8 +42,9 @@ class UpliftRequest(BaseModel):
         description="Relative home value score (0-1, where 1 is higher value).",
     )
 
-    class Config:
-        schema_extra = {
+    # Pydantic v2 style
+    model_config = ConfigDict(
+        json_schema_extra={
             "example": {
                 "crime_count": 25,
                 "population": 4200,
@@ -51,6 +52,8 @@ class UpliftRequest(BaseModel):
                 "home_value_score": 0.4,
             }
         }
+    )
+
 
 class UpliftResponse(BaseModel):
     uplift_score: float
