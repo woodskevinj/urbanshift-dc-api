@@ -74,19 +74,23 @@ urbanshift-dc-api/
 **Crime & Arrests**
 
 - DC Crime Incidents
+
   https://opendata.dc.gov/datasets/crime-incidents/
 
 - Adult Arrests
+
   https://opendata.dc.gov/datasets/adult-arrests/
 
 **Census & Demographics**
 
 - Census ACS Population by Tract
+
   https://api.census.gov/
 
 **Geographic Data**
 
 - DC Census Tracts (Shapefiles)
+
   https://www2.census.gov/geo/tiger/
 
 (Additional sources such as home values, grocery store access, and metro proximity will be layered in later versions.)
