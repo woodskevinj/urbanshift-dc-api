@@ -1,0 +1,25 @@
+# Python junk
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual envs
+venv/
+.env/
+*.env
+
+# Jupyter and notebooks cache
+.ipynb_checkpoints/
+.notebook_cache/
+
+# Data (we don't need raw/processed in the image for inference)
+data/
+
+# Git metadata
+.git/
+.gitignore
+
+# IDE stuff
+.vscode/
+.idea/
